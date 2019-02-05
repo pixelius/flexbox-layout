@@ -1,0 +1,50 @@
+/* Settings.scss */
+html, body, div,
+nav,
+h1, h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html {
+  /* How the user agent should calculate the total width and height of an element.
+    See: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+    See: https://allthingssmitty.com/2017/01/09/css-reset-for-minimalists */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-style: italic;
+}
+
+/* Styles.scss */
+.wrapper {
+  margin: auto;
+  max-width: 1280px;
+  height: 100vh;
+  color: #f7f7f7;
+  background-color: #757575;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+  background-color: #303030;
+}
+
+h2 {
+  margin-left: auto;
+}
+/*# sourceMappingURL=styles.css.map */

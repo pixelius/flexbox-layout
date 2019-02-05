@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "partial/settings";
+
+/* Styles.scss */
+.wrapper {
+    margin: auto;
+    max-width: 1280px;
+    height: 100vh;
+    color: map-get($base, lightgrey);
+    background-color: map-get($base, grey);
+}
+
+nav {
+    display: flex;
+    padding: 2rem;
+    background-color: map-get($base, darkgrey);
+}
+
+h2 {
+    margin-left: auto;
+}
