@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "partial/settings";
+
+/* Styles.scss */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+header,
+footer {
+    padding: .75rem 0;
+    background-color: map-get($base, darkgrey);
+} 
+
+main {
+    padding: 3rem 0;
+    color: map-get($base, darkgrey);
+}
+
+aside {
+    padding: 1.5rem 0;
+    background-color: map-get($base, grey);
+}
+
+@media all and (min-width: 60em) {
+    .wrapper {
+        flex-direction: row;
+    }
+
+    header,
+    footer {
+        flex-basis: 100%;
+    }
+
+    main {
+        flex-basis: 50%;
+    }
+
+    aside {
+        flex-basis: 25%;
+    }
+
+    main,
+    aside {
+        padding: 4.5rem 0;
+    }
+}
