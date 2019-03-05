@@ -1,0 +1,94 @@
+/* Settings.scss */
+html, body,
+div, main, aside,
+header, footer {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html {
+  /* How the user agent should calculate the total width and height of an element.
+    See: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+    See: https://allthingssmitty.com/2017/01/09/css-reset-for-minimalists */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  font-size: 14px;
+  font-style: italic;
+  color: #fdfdfd;
+}
+
+aside,
+footer,
+header,
+main {
+  display: block;
+}
+
+/* Styles.scss */
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+header,
+footer {
+  padding: .75rem 0;
+  background-color: #303030;
+}
+
+main {
+  padding: 3rem 0;
+  color: #303030;
+}
+
+aside {
+  padding: 1.5rem 0;
+  background-color: #757575;
+}
+
+@media all and (min-width: 60em) {
+  .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header,
+  footer {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  main {
+    -ms-flex-preferred-size: 66%;
+        flex-basis: 66%;
+  }
+  aside {
+    -ms-flex-preferred-size: 34%;
+        flex-basis: 34%;
+  }
+  main,
+  aside {
+    padding: 4.5rem 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
