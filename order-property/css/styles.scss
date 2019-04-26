@@ -2,28 +2,32 @@
 @import "partial/settings";
 
 /* Styles.scss */
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    max-width: 1280px;
-    height: 100vh;
-    color: map-get($base, darkgrey);
-    background-color: map-get($base, grey);
+.o-page {
+    font-family: 'myfont';
+    line-height: 1.6;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 1180px;
+        height: 100vh;
+        color: map-get($base, darkgrey);
+        background-color: map-get($nord, nord6);
+    }
 }
 
 .box {
     padding: 2rem;
     margin: 0 .5rem;
     background-color: map-get($base, lightgrey);
-    border: 2px solid map-get($base, darkgrey);
+    border: 1px solid map-get($nord, nord0);
 }
 
 .box--1 {
     order: 1;
-    background-color: lightskyblue;
+    background-color: map-get($nord, nord15);
 }
 
 .box--2 {
@@ -36,7 +40,7 @@
 
 .box--4 {
     order: 4;
-    background-color: lightgoldenrodyellow;
+    background-color: map-get($nord, nord14);
 }
 
 .box--6 {
