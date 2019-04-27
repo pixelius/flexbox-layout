@@ -122,14 +122,14 @@ svg[role="img"]:not([aria-label]):not([aria-labelledby]) {
   margin: auto;
   max-width: 1180px;
   height: 100vh;
-  color: #303030;
-  background-color: #eceff4;
+  color: #2e3440;
+  background-color: #434c5e;
 }
 
 .box {
   padding: 2rem;
   margin: 0 .5rem;
-  background-color: #f7f7f7;
+  background-color: #eceff4;
   border: 1px solid #2e3440;
 }
 
@@ -137,7 +137,7 @@ svg[role="img"]:not([aria-label]):not([aria-labelledby]) {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
-  background-color: #b48ead;
+  background-color: #88c0d0;
 }
 
 .box--2 {
@@ -156,7 +156,7 @@ svg[role="img"]:not([aria-label]):not([aria-labelledby]) {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
-  background-color: #a3be8c;
+  background-color: #ebcb8b;
 }
 
 .box--6 {

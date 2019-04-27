@@ -13,21 +13,21 @@
         margin: auto;
         max-width: 1180px;
         height: 100vh;
-        color: map-get($base, darkgrey);
-        background-color: map-get($nord, nord6);
+        color: map-get($nord, nord0);
+        background-color: map-get($nord, nord2);
     }
 }
 
 .box {
     padding: 2rem;
     margin: 0 .5rem;
-    background-color: map-get($base, lightgrey);
+    background-color: map-get($nord, nord6);
     border: 1px solid map-get($nord, nord0);
 }
 
 .box--1 {
     order: 1;
-    background-color: map-get($nord, nord15);
+    background-color: map-get($nord, nord8);
 }
 
 .box--2 {
@@ -40,7 +40,7 @@
 
 .box--4 {
     order: 4;
-    background-color: map-get($nord, nord14);
+    background-color: map-get($nord, nord13);
 }
 
 .box--6 {
