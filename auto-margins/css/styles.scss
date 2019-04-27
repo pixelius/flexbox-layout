@@ -2,18 +2,22 @@
 @import "partial/settings";
 
 /* Styles.scss */
-.wrapper {
-    margin: auto;
-    max-width: 1280px;
-    height: 100vh;
-    color: map-get($base, lightgrey);
-    background-color: map-get($base, grey);
-}
+.o-page {
+    font-family: 'myfont';
+    line-height: 1.6;
+    &__inner {
+        margin: auto;
+        max-width: 1180px;
+        height: 100vh;
+        color: map-get($nord, nord6);
+        background-color: map-get($nord, nord6);
+    }
+} 
 
-nav {
+.nav {
     display: flex;
     padding: 2rem;
-    background-color: map-get($base, darkgrey);
+    background-color: map-get($nord, nord2);
 }
 
 h2 {
