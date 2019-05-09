@@ -2,26 +2,29 @@
 @import "partial/settings";
 
 /* Styles.scss */
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
-    max-width: 1280px;
-    height: 100vh;
-    color: map-get($base, darkgrey);
-    background-color: map-get($base, grey);
+.o-page {
+    font-family: 'myfont';
+    line-height: 1.6;
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: auto;
+        max-width: 1180px;
+        height: 100vh;
+        background-color: map-get($nord, nord2);
+    }
 }
 
 .box {
     padding: 2rem;
-    background-color: map-get($base, lightgrey);
-    border: 2px solid map-get($base, darkgrey);
+    background-color: map-get($nord, nord6);
+    border: 1px solid map-get($nord, nord0);
 }
 
 @media all and (min-width: 60em) {
-    .wrapper {
+    .o-page__inner {
         flex-direction: row;
     }
 }
