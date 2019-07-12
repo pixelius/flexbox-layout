@@ -2,49 +2,52 @@
 @import "partial/settings";
 
 /* Styles.scss */
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    text-align: center;
-}
-
-header,
-footer {
-    padding: .75rem 0;
-    background-color: map-get($base, darkgrey);
+.o-page {
+    font-family: 'myfont';
+    line-height: 1.6;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 1180px;
+        margin: auto;
+        color: map-get($nord, nord0);
+        text-align: center;
+    }
 } 
 
-main {
+.header,
+.footer {
+    color: map-get($nord, nord6);
+    background-color: map-get($nord, nord2);
+} 
+
+.main {
     padding: 3rem 0;
-    color: map-get($base, darkgrey);
+    background-color: map-get($nord, nord8);
 }
 
-aside {
+.aside {
     padding: 1.5rem 0;
-    background-color: map-get($base, grey);
+    background-color: map-get($nord, nord6);
 }
 
 @media all and (min-width: 60em) {
-    .wrapper {
+    .o-page__inner {
         flex-direction: row;
     }
 
-    header,
-    footer {
+    .header,
+    .footer {
         flex-basis: 100%;
     }
 
-    main {
+    .main {
         flex-basis: 50%;
     }
 
-    aside {
+    .aside {
         flex-basis: 25%;
-    }
-
-    main,
-    aside {
-        padding: 4.5rem 0;
+        padding: 3rem 0;
     }
 }
