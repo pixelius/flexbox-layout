@@ -1,5 +1,27 @@
-/* Settings.scss */
-html, body, div {
+@charset "UTF-8";
+/* _Settings.scss */
+html, body,
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, picture, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,13 +43,69 @@ html {
           box-sizing: inherit;
 }
 
-body {
-  font-size: 14px;
-  font-style: italic;
+a, a:visited {
+  color: inherit;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+img, video {
+  max-width: 100%;
+  /* Remove vertical spacing due to line-height (inline-block elements) */
+  vertical-align: middle;
+}
+
+/* A11y warning ≈ alt attribute. */
+img[alt=""], img:not([alt]) {
+  border: 4px dashed #830000;
+}
+
+/* A11y warning ≈ aria label. */
+[role="img"]:not([aria-label]):not([aria-labelledby]),
+svg[role="img"]:not([aria-label]):not([aria-labelledby]) {
+  border: 4px dashed #830000;
+}
+
+/* Font loading. */
+@font-face {
+  font-family: 'myfont';
+  src: url("../fonts/myfont.woff2") format("woff2"), url("../fonts/myfont.woff") format("woff");
+  /* Unicode-range subsetting defines the characters that are supported by the font. 
+    See: https://unicode-table.com/en */
+  unicode-range: U+0020—007F, U+0100—017F, 0400—04FF;
+  font-style: normal;
+  font-weight: 400;
+  /* How font files are loaded and displayed by the browser. */
+  font-display: swap;
 }
 
 /* Styles.scss */
-.wrapper {
+.o-page {
+  font-family: 'myfont';
+  line-height: 1.6;
+}
+
+.o-page__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,16 +115,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
-  max-width: 1280px;
+  max-width: 1180px;
   height: 100vh;
-  color: #303030;
-  background-color: #757575;
+  margin: auto;
+  color: #2e3440;
+  background-color: #434c5e;
 }
 
 p {
   padding: 2rem 6rem;
-  background-color: #f7f7f7;
-  border: 2px solid #303030;
+  background-color: #eceff4;
+  border: 1px solid #2e3440;
 }
 /*# sourceMappingURL=styles.css.map */
