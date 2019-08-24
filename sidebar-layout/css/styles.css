@@ -1,7 +1,27 @@
-/* Settings.scss */
+@charset "UTF-8";
+/* _Settings.scss */
 html, body,
-div, main, aside,
-header, footer {
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+em, small, strong,
+sub, sup,
+mark, del, ins, strike,
+abbr, dfn,
+blockquote, q, cite,
+code, pre,
+ol, ul, li, dl, dt, dd,
+div, section, article,
+main, aside, nav,
+header, hgroup, footer,
+img, picture, figure, figcaption,
+address, time,
+audio, video,
+canvas, iframe,
+details, summary,
+fieldset, form, label, legend,
+table, caption,
+tbody, tfoot, thead,
+tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,21 +43,69 @@ html {
           box-sizing: inherit;
 }
 
-body {
-  font-size: 14px;
-  font-style: italic;
-  color: #fdfdfd;
+a, a:visited {
+  color: inherit;
 }
 
+article,
 aside,
 footer,
 header,
+nav,
+section,
 main {
   display: block;
 }
 
+ol, ul {
+  list-style: none;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+img, video {
+  max-width: 100%;
+  /* Remove vertical spacing due to line-height (inline-block elements) */
+  vertical-align: middle;
+}
+
+/* A11y warning ≈ alt attribute. */
+img[alt=""], img:not([alt]) {
+  border: 4px dashed #830000;
+}
+
+/* A11y warning ≈ aria label. */
+[role="img"]:not([aria-label]):not([aria-labelledby]),
+svg[role="img"]:not([aria-label]):not([aria-labelledby]) {
+  border: 4px dashed #830000;
+}
+
+/* Font loading. */
+@font-face {
+  font-family: 'myfont';
+  src: url("../fonts/myfont.woff2") format("woff2"), url("../fonts/myfont.woff") format("woff");
+  /* Unicode-range subsetting defines the characters that are supported by the font. 
+    See: https://unicode-table.com/en */
+  unicode-range: U+0020—007F, U+0100—017F, 0400—04FF;
+  font-style: normal;
+  font-weight: 400;
+  /* How font files are loaded and displayed by the browser. */
+  font-display: swap;
+}
+
 /* Styles.scss */
-.wrapper {
+.o-page {
+  font-family: 'myfont';
+  line-height: 1.6;
+}
+
+.o-page__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,48 +115,48 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 1180px;
+  margin: auto;
+  color: #2e3440;
   text-align: center;
 }
 
-header,
-footer {
-  padding: .75rem 0;
-  background-color: #303030;
+.header,
+.footer {
+  color: #eceff4;
+  background-color: #434c5e;
 }
 
-main {
+.main {
   padding: 3rem 0;
-  color: #303030;
+  background-color: #eceff4;
 }
 
-aside {
+.aside {
   padding: 1.5rem 0;
-  background-color: #757575;
+  background-color: #88c0d0;
 }
 
 @media all and (min-width: 60em) {
-  .wrapper {
+  .o-page__inner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  header,
-  footer {
+  .header,
+  .footer {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  main {
-    -ms-flex-preferred-size: 66%;
-        flex-basis: 66%;
+  .main {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
   }
-  aside {
-    -ms-flex-preferred-size: 34%;
-        flex-basis: 34%;
-  }
-  main,
-  aside {
-    padding: 4.5rem 0;
+  .aside {
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+    padding: 3rem 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
